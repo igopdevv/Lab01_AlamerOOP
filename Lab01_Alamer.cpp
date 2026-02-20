@@ -1,26 +1,27 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b) {
-    int temp = *a;  
-    *a = *b;
-    *b = temp;
+int swap (int* x, int* y){
+
+    *x = *x+*y;
+    *y = *x-*y;
+    *x = *x-*y;
+    return 0;
 }
 
-int main() {
+main (){
 
-    int x = 10;
-    int y = 20;
+    int X = 10, Y =20;
 
-    cout << "Before Swapping:" << endl;
-    cout << "x = " << x << endl;
-    cout << "y = " << y << endl;
+    cout << "Before swapping: " << endl;
+    cout << "X = " << X << endl;
+    cout << "Y = " << Y << endl;
 
-    swap(&x, &y);
+    swap(&X, &Y);
 
-    cout << "\nAfter Swapping:" << endl;
-    cout << "x = " << x << endl;
-    cout << "y = " << y << endl;
+    cout << "After swapping: " << endl;
+    cout << "X = " << X << endl;
+    cout << "Y = " << Y << endl;
 
     return 0;
 }
